@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(180deg, black,#171435, #DA1F50);
     color: rgb(255, 255, 255);
 }
 

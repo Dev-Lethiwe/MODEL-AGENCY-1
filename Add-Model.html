@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Model</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://kit.fontawesome.com/73af3111f2.js" crossorigin="anonymous"></script>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+    }
+
+    button, a {
+        cursor: pointer;
+    }
+
+    header {
+        background: linear-gradient(45deg, black, rgb(38, 38, 38));
+        color: white;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+    }
+
+    header div {
+        display: inline;
+    }
+
+    header div p {
+        display: inline;
+    }
+
+    header h2 {
+        display: inline;
+    }
+
+    header button {
+        width: fit-content;
+        height: fit-content;
+        outline: none;
+        border: 2px solid white;
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        padding: 10px;
+        letter-spacing: 1px;
+        background-color: transparent;
+    }
+
+    main button i, main label i {
+        font-size: 20px;
+        
+        margin-inline-end: 10px;
+    }
+
+    main button {
+        outline: none;
+        border: 1px solid black;
+        width: 200px;
+        margin-inline-end: 20px;
+        padding: 10px;
+        background-color: white;
+    }
+
+    main {
+        margin: 30px 150px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    main div {
+        display: inline;
+        margin-inline-end: 100px;
+    }
+
+    .submit {
+        display: block;
+    }
+
+    label {
+        margin: 10px 0;
+    }
+
+    label, input, select, textarea, button {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+    }
+
+
+
+    input, select, textarea {
+        padding: 10px;
+        width: 400px;
+        background-color: transparent;
+        border: 1px solid rgb(202, 202, 202);
+    
+    }
+
+    .upload {
+        background-color: rgb(13, 158, 0);
+        color: white;
+        border: none;
+    }
+
+    .upload i , .reset i{
+        color: white;
+    }
+
+    .reset {
+        background-color: red;
+        border: none;
+        color: white;
+    }
+
+    
+
+    
+    
+    input, textarea, select {
+        margin: 10px 0 20px 0 ;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        height: 80px;
+        margin-block-start: 100px;
+        border-top: 1px solid black;
+    }
+
+    footer div {
+        display: inline;
+    }
+
+    footer div p {
+        display: inline;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0 20px;
+    }
+
+    footer button {
+        outline: none;
+        border: none;
+        margin: 0 10px;
+        background-color: transparent;
+    }
+
+    footer button i {
+        font-size: 20px;
+        color: rgb(72, 72, 72);
+        
+    }
+
+    footer button i:hover {
+        color: rgb(0, 0, 0);
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div><p>LOGO</p></div>
+        <h2>ADMINISTRATION OF MODELS</h2>
+        <button>SIGN OUT</button>
+    </header>
+    <main>
+        <div>
+            <label for="model-name">Name</label><br>
+        <input type="text" name="model-name" id="model-name" placeholder="John Doe" aria-placeholder="Name and Surname">
+        </div>
+        <div>
+            <label for="model-id">Model ID</label>
+        <br>
+        <input type="text" name="model-id" id="model-id" placeholder="0000" aria-placeholder="4 digit number ID" pattern="[0-9]{4}">
+        </div>
+        <div>
+            <label for="age">Age</label>
+        <br>
+        <input type="number" name="age" id="age" placeholder="20" aria-placeholder="Age">
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <br>
+            <select>
+            
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Non-Binary</option>
+                    <option>Undisclosed</option>
+                
+            </select>
+        </div>
+        <div>
+            <label for="race">Race</label>
+            <br>
+            <input type="text" name="race" id="race" placeholder="Black" aria-placeholder="Race">
+        </div>
+        <div>
+            <label for="skin-tone">Skin Tone</label>
+        <br>
+        <input type="text" name="skin-tone" id="skin-tone" placeholder="Light" aria-placeholder="Skin Tone">
+        </div>
+        <div>
+            <label for="height">Height(m)</label>
+        <br>
+        <input type="number" name="height" id="height" placeholder="1.6m" aria-placeholder="Height in metres">
+        </div>
+        <div>
+            <label for="eye-color">Eye Color</label>
+            <br>
+            <input type="text" name="eye-color" id="eye-color" placeholder="Brown" aria-placeholder="Eye color">
+        </div>
+        <div>
+            <label for="experience">Experience</label>
+            <br>
+            <input type="text" name="experience" id="experience" placeholder="Advertising" aria-placeholder="Model's Experience">
+        </div>
+        <div>
+            <label for="image"><i class="far fa-images"></i> Upload images</label>
+        
+            <br>    <input type="file" name="image" id="image" accept="image/*" multiple>
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <br>
+            <textarea name="description" id="description" placeholder="Description of the model..." aria-placeholder="Describe a little bit about the model"></textarea> </textarea>
+        </div>
+       <div class="submit">
+        <button type="submit" class="upload"><i class="fas fa-upload"></i>Upload Model Info</button>
+        <button type="reset" class="reset"><i class="fas fa-undo"></i>Reset</button>
+       </div>
+      
+    </main> 
+    
+    <footer>
+        <div>
+            <p>LOGO</p>
+        </div>
+        <nav>
+            <a href="">PRIVACY POLICY</a>
+            <a href="">TERMS & CONDITIONS</a>
+            <button><i class="fab fa-facebook-square"></i></button>
+            <button><i class="fab fa-instagram"></i></button>
+            <button><i class="fab fa-whatsapp"></i></button>
+        </nav>
+        
+    </footer>
+</body>
+</html>
